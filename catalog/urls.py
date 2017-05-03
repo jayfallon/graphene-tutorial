@@ -17,6 +17,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from graphene_django.views import GraphQLView
 
+# leave url only for GraphQL IDE
 urlpatterns = [
     url(r'^api/v1/', GraphQLView.as_view(graphiql=True)),
 ]

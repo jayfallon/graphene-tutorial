@@ -1,3 +1,4 @@
+# import graphene
 from graphene import AbstractType
 from graphene import Field
 from graphene import Node
@@ -5,14 +6,18 @@ from graphene import ClientIDMutation
 from graphene import String
 from graphene import Float
 
+# import graphene_django
 from graphene_django.filter import DjangoFilterConnectionField
 from graphene_django.types import DjangoObjectType
 
-from graphql_relay.node.node import from_global_id
-
+# import models
 from .models import Continent
 from .models import Country
 
+# import relay module
+from graphql_relay.node.node import from_global_id
+
+# define node classes
 class ContinentNode(DjangoObjectType):
     class Meta:
         model = Continent
@@ -29,6 +34,9 @@ class CountryNode(DjangoObjectType):
             'continent': ['exact'],
         }
 
+# define mutation, update and delete classes
+
+# creates new continent
 class NewContinent(ClientIDMutation):
     continent = Field(ContinentNode)
     class Input:
@@ -42,6 +50,7 @@ class NewContinent(ClientIDMutation):
         temp.save()
         return NewContinent(continent=temp)
 
+# creates new country
 class NewCountry(ClientIDMutation):
     country = Field(CountryNode)
     class Input:
@@ -59,6 +68,7 @@ class NewCountry(ClientIDMutation):
         country.save()
         return NewCountry(country=country)
 
+# updates country
 class UpdateCountry(ClientIDMutation):
     country = Field(CountryNode)
     class Input:
@@ -74,6 +84,7 @@ class UpdateCountry(ClientIDMutation):
         country.save()
         return UpdateCountry(country=country)
 
+# deletes country
 class RemoveCountry(ClientIDMutation):
     country = Field(CountryNode)
     class Input:
@@ -89,6 +100,7 @@ class RemoveCountry(ClientIDMutation):
         country.delete()
         return RemoveCountry(country=country)        
 
+# define query classes
 class ContinentQuery(AbstractType):
      continent = DjangoFilterConnectionField(ContinentNode)
  
