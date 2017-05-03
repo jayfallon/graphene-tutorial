@@ -1,0 +1,8 @@
+Django
+gunicorn
+graphene
+graphene-django
+graphql-relay
+django-filter
+graphene-django
+whitenoise
