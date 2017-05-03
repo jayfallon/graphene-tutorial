@@ -6,8 +6,6 @@
 
 ### Project Citations
 
-Project Citations
-
 [An Introduction to Graphene and Relay](https://speakerdeck.com/mjtamlyn/an-introduction-to-graphene-and-relay)
 
 [Apollo](http://dev.apollodata.com/)
