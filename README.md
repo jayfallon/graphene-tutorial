@@ -1,6 +1,21 @@
-## graphene-tutorial
+### Video
+
+The video is available at the following URL:
+
+[https://vimeo.com/215920314](https://vimeo.com/215920314)
+
+
+### Code
+
+All of my code is available at the following GitHub repository:
 
 [Project Home](https://github.com/jayfallon/graphene-tutorial)
+
+This will require installing the Django and Graphene modules, via PIP as Conda does not list these libraries, and will allow the user to make use of the GraphQL interface locally.
+
+### Live GraphQL IDE
+
+A live interactive GraphQL IDE allowing introspection of the schema along with functionality for data manipulation is, all generated from the project demo is available here: 
 
 [Interactive IDE](https://graphene-tutorial-cscie7.herokuapp.com/api/v1/)
 
@@ -55,5 +70,3 @@
 [Using React with Django, with a little help from Webpack](http://geezhawk.github.io/using-react-with-django-rest-framework)
 
 [Zero to GraphQL in 30 Minutes](https://www.youtube.com/watch?v=UBGzsb2UkeY)
-
-
